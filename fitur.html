@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fitur — Sekovia</title>
+<meta name="description" content="Daftar lengkap fitur Sekovia: absensi kartu QR, akademik, keuangan sekolah, perpustakaan digital, komunikasi, dan lainnya.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='11' fill='%232563EB'/%3E%3Cpath d='M13 21l4 4 10-11' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap navrow">
+    <a href="index.html" class="brand">
+      <svg width="30" height="30" viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="11" fill="#2563EB"/><path d="M13 21l4 4 10-11" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Sekovia
+    </a>
+    <div class="navlinks">
+      <ul>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="fitur.html" class="active" aria-current="page">Fitur</a></li>
+        <li><a href="manfaat.html">Manfaat</a></li>
+        <li><a href="harga.html">Harga</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="navcta">
+      <button class="burger" id="burgerBtn" aria-label="Buka menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a class="btn btn-primary" href="https://app.sekovia.id" target="_blank" rel="noopener"><span class="long">Masuk ke Aplikasi</span><span class="short">Masuk</span></a>
+    </div>
+  </div>
+  <div id="mobileMenu" hidden style="border-top:1px solid var(--line); background:var(--bg)">
+    <ul style="list-style:none; margin:0; padding:16px 24px; display:flex; flex-direction:column; gap:16px">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="fitur.html" class="active" aria-current="page">Fitur</a></li>
+      <li><a href="manfaat.html">Manfaat</a></li>
+      <li><a href="harga.html">Harga</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="pagehead">
+    <div class="wrap">
+      <div class="crumb"><a href="index.html">Beranda</a> / Fitur</div>
+      <h1>Semua yang ada di dalam Sekovia</h1>
+    </div>
+  </section>
+
+  <!-- ============================= FITUR UNGGULAN ============================= -->
+  <section id="unggulan">
+    <div class="wrap">
+      <div class="sechead">
+        <div class="eyebrow"><span class="dot"></span>Fitur unggulan</div>
+        <h2>Empat hal yang paling sering dipuji sekolah yang mencobanya.</h2>
+      </div>
+
+      <div class="featgrid">
+        <div class="featcard">
+          <span class="feat-icon" style="background:var(--accent-soft); color:var(--accent)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3m4 0h0M14 21h7M17.5 14v7"/></svg>
+          </span>
+          <h3>Kartu QR, dipindai, langsung tercatat</h3>
+          <p>Tiap siswa punya kartu ber-kode <span class="mono">SEK1:&lt;id&gt;</span>. Guru memindainya lewat kamera HP di layar absensi — begitu terbaca, status langsung Hadir. Kartu dari kelas lain atau kode asing otomatis ditolak; siswa berstatus Sakit/Izin tidak tertimpa. Orang tua dapat notifikasi saat anak check-in, dan koreksi otomatis kalau statusnya berubah.</p>
+          <div class="chipline"><span class="chip">Scan kamera</span><span class="chip">Absensi manual tetap tersedia</span><span class="chip">Notifikasi wali</span></div>
+        </div>
+        <div class="featcard">
+          <span class="feat-icon" style="background:var(--purple-soft); color:var(--purple)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </span>
+          <h3>Buku EPUB mengalir, PDF nyaman dibaca</h3>
+          <p>Buku EPUB dibaca ala aplikasi novel — teks menyesuaikan lebar layar, ukuran huruf dan tema (terang/sepia/gelap) bisa diatur. Buku PDF tetap tampil apa adanya tapi dipoles: cubit untuk zoom, gulir menerus, dan "Mode Baca" yang menyusun ulang teks jadi paragraf mengalir untuk PDF yang punya lapisan teks.</p>
+          <div class="chipline"><span class="chip">EPUB &amp; PDF</span><span class="chip">Atur huruf &amp; tema</span><span class="chip">Ingat halaman terakhir</span></div>
+        </div>
+        <div class="featcard">
+          <span class="feat-icon" style="background:var(--green-soft); color:var(--green)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/><circle cx="8.5" cy="14" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="14" r="1.2" fill="currentColor" stroke="none"/><circle cx="15.5" cy="14" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <h3>Catatan pribadi, bertanggal, ikut ke mana pun masuk</h3>
+          <p>Setiap orang — guru, siswa, wali — punya kalender pribadi untuk mencatat pengingat, acara, atau hal penting pada tanggal tertentu, ditandai dengan label warna. Catatan dari sekolah (pengumuman kalender resmi) tampil berdampingan, jelas ditandai bukan catatan pribadi.</p>
+          <div class="chipline"><span class="chip">Tersimpan di akun</span><span class="chip">Label warna</span><span class="chip">Lintas perangkat</span></div>
+        </div>
+        <div class="featcard">
+          <span class="feat-icon" style="background:var(--sky-soft); color:var(--sky)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.5L18 9l-4.1 1.5L12 15l-1.9-4.5L6 9l4.1-1.5L12 3z"/><path d="M19 14l.8 1.9L22 17l-2.2.9L19 20l-.8-2.1L16 17l2.2-1.1L19 14z"/></svg>
+          </span>
+          <h3>Bantu guru menyusun soal dari materi <span style="color:var(--muted-2); font-weight:500; font-size:.75em">— opsional</span></h3>
+          <p>Sekolah bisa mengaktifkan Asisten AI untuk membantu guru menyusun soal pilihan ganda maupun esai dari materi ajar, lengkap dengan tingkat kesulitan — draf yang tetap dicek dan disunting guru sebelum dipakai. Fitur berbayar, dinyalakan per sekolah.</p>
+          <div class="chipline"><span class="chip">Pilihan ganda &amp; esai</span><span class="chip">Per sekolah</span><span class="chip">Guru tetap mengedit</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= FITUR LENGKAP ============================= -->
+  <section id="lengkap" style="padding-top:0">
+    <div class="wrap">
+      <div class="sechead">
+        <div class="eyebrow"><span class="dot"></span>Semua modul, satu langganan</div>
+        <h2>Dari absen pagi, nilai, keuangan, sampai kegiatan siswa — semuanya ada.</h2>
+        <p class="lede">Sekovia bukan cuma absensi. Berikut daftar lengkap yang ada di dalam satu aplikasi, dikelompokkan seperti yang benar-benar dipakai admin sekolah sehari-hari.</p>
+      </div>
+      <div class="checklist">
+        <div class="checkitem" style="--c:var(--accent); --cs:var(--accent-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Absensi Kartu QR &amp; Manual</b><p>Guru memindai kartu QR siswa atau menandai manual dalam hitungan detik; status Sakit/Izin/Terlambat tidak pernah tertimpa.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--purple); --cs:var(--purple-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Akademik &amp; Nilai</b><p>Tugas, ujian, remedial, leger nilai, hingga rapor digital tersusun per semester dan langsung terhubung ke jadwal kelas.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--sky); --cs:var(--sky-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Jadwal Pelajaran Senin–Sabtu</b><p>Jadwal per kelas untuk enam hari sekolah, menandai otomatis pelajaran "hari ini" di beranda siswa dan guru.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--green); --cs:var(--green-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Kalender &amp; Catatan Pribadi</b><p>Setiap akun punya kalender pribadi bertanggal dengan label warna, berdampingan dengan catatan resmi dari sekolah.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--orange); --cs:var(--orange-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Perpustakaan Digital</b><p>Buku EPUB (mengalir, atur huruf &amp; tema) dan PDF (Mode Halaman &amp; Mode Baca) dibaca langsung di aplikasi, tanpa unduh terpisah.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--accent); --cs:var(--accent-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Keuangan Sekolah</b><p>Tagihan SPP, diskon &amp; beasiswa, tabungan siswa, penggajian staf, sampai laporan keuangan sekolah dalam satu tempat.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--purple); --cs:var(--purple-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Komunikasi Orang Tua–Guru</b><p>Pesan langsung, pengumuman/broadcast sekolah, dan notifikasi otomatis saat anak check-in — tanpa nomor pribadi guru.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--sky); --cs:var(--sky-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Kegiatan &amp; Karakter Siswa</b><p>Ekstrakurikuler, prestasi, kedisiplinan, konseling, dan kegiatan keagamaan tercatat rapi per siswa.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--green); --cs:var(--green-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Operasional Sekolah</b><p>PPDB (penerimaan siswa baru), inventaris, fasilitas, transportasi &amp; penjemputan, hingga arsip dokumen digital.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--orange); --cs:var(--orange-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Asisten AI untuk Guru <span class="soon">Opsional</span></b><p>Bantu menyusun soal pilihan ganda &amp; esai dari materi ajar — draf yang tetap disunting guru sebelum dipakai.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--accent); --cs:var(--accent-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Analitik &amp; Laporan</b><p>Dashboard kehadiran, akademik, dan keuangan sekolah untuk admin — angka yang sama dengan yang dilihat guru dan wali.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--purple); --cs:var(--purple-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Peran, Izin &amp; Log Aktivitas</b><p>Matriks akses per peran dan jejak audit untuk perubahan penting — jelas siapa mengubah apa, dan kapan.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--sky); --cs:var(--sky-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Persetujuan Berjenjang</b><p>Ajuan seperti diskon SPP, perubahan nilai, atau koreksi absensi tercatat sebagai alur, bukan pesan yang hilang di chat.</p></div>
+        </div>
+        <div class="checkitem" style="--c:var(--green); --cs:var(--green-soft)">
+          <span class="tick"><svg class="icon-tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><b>Web, Android &amp; iOS</b><p>Satu akun, satu data yang sama — dibuka dari browser, HP Android, atau iPhone, kapan pun dibutuhkan.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= PRATINJAU ============================= -->
+  <section id="pratinjau">
+    <div class="wrap">
+      <div class="sechead">
+        <div class="eyebrow"><span class="dot"></span>Sekilas tampilan</div>
+        <h2>Tiga layar yang paling sering dibuka setiap hari.</h2>
+      </div>
+      <div class="tourgrid">
+        <div class="tourcard">
+          <div class="tourchrome"><i></i><i></i><i></i><span>Beranda Admin</span></div>
+          <div class="tourbody">
+            <div class="tourstat">
+              <div><b>96%</b><span>HADIR</span></div>
+              <div><b>24</b><span>KELAS</span></div>
+              <div><b>Rp</b><span>SPP</span></div>
+            </div>
+            <div class="tourbars" aria-hidden="true">
+              <i style="height:55%"></i><i style="height:80%"></i><i style="height:40%"></i><i style="height:95%"></i><i style="height:65%"></i><i style="height:70%"></i>
+            </div>
+          </div>
+          <div class="tourfoot">Kehadiran &amp; keuangan sekolah, real-time.</div>
+        </div>
+        <div class="tourcard">
+          <div class="tourchrome"><i></i><i></i><i></i><span>Perpustakaan</span></div>
+          <div class="tourbody">
+            <div class="tourbooks" aria-hidden="true">
+              <i style="background:var(--accent-soft)"></i><i style="background:var(--purple-soft)"></i><i style="background:var(--green-soft)"></i><i style="background:var(--orange-soft)"></i>
+              <i style="background:var(--sky-soft)"></i><i style="background:var(--accent-soft)"></i><i style="background:var(--purple-soft)"></i><i style="background:var(--green-soft)"></i>
+            </div>
+          </div>
+          <div class="tourfoot">EPUB &amp; PDF, dibaca langsung — atur huruf &amp; tema baca.</div>
+        </div>
+        <div class="tourcard">
+          <div class="tourchrome"><i></i><i></i><i></i><span>Kalender</span></div>
+          <div class="tourbody">
+            <div class="tourcal" aria-hidden="true">
+              <i></i><i class="on" style="--c:var(--accent)"></i><i></i><i></i><i class="on" style="--c:var(--green)"></i><i></i><i></i>
+              <i></i><i></i><i class="on" style="--c:var(--orange)"></i><i></i><i></i><i></i><i></i>
+              <i class="on" style="--c:var(--purple)"></i><i></i><i></i><i></i><i class="on" style="--c:var(--accent)"></i><i></i><i></i>
+              <i></i><i></i><i></i><i class="on" style="--c:var(--sky)"></i><i></i><i></i><i></i>
+            </div>
+          </div>
+          <div class="tourfoot">Catatan pribadi + catatan sekolah, satu kalender.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= CTA ============================= -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="minicta">
+        <div>
+          <h3>Sudah lihat semua fitur, sekarang berapa biayanya?</h3>
+          <p>Biaya berlangganan disesuaikan skala sekolah — bukan paket kaku.</p>
+        </div>
+        <a class="btn btn-primary" href="harga.html">Lihat Harga →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex; flex-direction:column; gap:24px">
+    <div class="footrow" style="align-items:flex-start">
+      <div style="max-width:340px">
+        <a href="index.html" class="brand" style="margin-bottom:10px; display:inline-flex">
+          <svg width="26" height="26" viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="11" fill="#2563EB"/><path d="M13 21l4 4 10-11" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Sekovia
+        </a>
+        <p style="font-size:.85rem; color:var(--muted); line-height:1.6">Aplikasi manajemen sekolah — absensi, akademik, keuangan, dan komunikasi orang tua–guru dalam satu tempat.</p>
+      </div>
+      <div class="footlinks" style="flex-direction:column; gap:10px">
+        <b style="color:var(--ink); font-size:.8rem">Halaman</b>
+        <a href="tentang.html">Tentang</a>
+        <a href="fitur.html">Fitur</a>
+        <a href="harga.html">Harga</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footlinks" style="flex-direction:column; gap:10px">
+        <b style="color:var(--ink); font-size:.8rem">Kontak</b>
+        <a href="mailto:kumienftotty@gmail.com">kumienftotty@gmail.com</a>
+        <a href="https://app.sekovia.id" target="_blank" rel="noopener">app.sekovia.id</a>
+        <a href="https://app.sekovia.id/kebijakan-privasi.html">Kebijakan Privasi</a>
+      </div>
+    </div>
+    <div class="footrow" style="border-top:1px solid var(--line); padding-top:20px">
+      <span>© 2026 Moh Arwani · Sekovia</span>
+      <span>Tegalpare, Kec. Muncar, Kab. Banyuwangi, Jawa Timur</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

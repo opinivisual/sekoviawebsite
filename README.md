@@ -1,33 +1,45 @@
 # Sekovia — Website
 
-Halaman landas (marketing site) untuk aplikasi manajemen sekolah **Sekovia**.
-Statis, satu berkas, tanpa proses build — dirancang untuk **GitHub Pages**.
+Halaman pemasaran (marketing site) untuk aplikasi manajemen sekolah **Sekovia**.
+Statis, banyak halaman, tanpa proses build — dirancang untuk **GitHub Pages**.
 
-- `index.html` — seluruh halaman (HTML + CSS + JS inline, tanpa dependensi build)
-- `.nojekyll` — memberi tahu GitHub Pages untuk tidak memproses situs ini lewat Jekyll
+## Struktur
+
+```
+index.html      Beranda — hero, 4 peran, teaser fitur, cara mulai, CTA
+tentang.html    Tentang Sekovia + Keamanan & Privasi
+fitur.html      Fitur unggulan + daftar lengkap 14 modul + pratinjau tampilan
+manfaat.html    Kenapa sekolah pindah ke Sekovia
+harga.html      Model harga (disesuaikan skala sekolah, bukan paket fiktif)
+faq.html        Pertanyaan umum
+kontak.html     Email, web admin, alamat + CTA
+assets/styles.css   Semua gaya (token warna, tipografi, komponen) — dipakai semua halaman
+assets/script.js    Menu mobile (hamburger) + animasi kartu fitur muncul saat discroll
+.nojekyll       Memberi tahu GitHub Pages untuk tidak memproses lewat Jekyll
+```
+
+Tiap halaman berbagi header (nav + logo) dan footer yang sama; nav menyorot
+halaman yang sedang dibuka (`class="active"`).
 
 ## Konten
 
-Satu halaman (`index.html`) berisi: hero, empat peran (Admin/Guru/Siswa/Orang
-Tua), fitur unggulan (Absensi Kartu QR, Perpustakaan Digital, Kalender &
-Catatan, Asisten AI), cara memulai, keamanan & privasi, dan kontak.
+Struktur & kelengkapan halaman dibandingkan dengan situs referensi
+(scholarik.com) atas permintaan pengguna — tapi **palet warna tetap milik
+Sekovia sendiri** (biru, bukan warna acuan). Teks fitur diambil dari deskripsi
+resmi di `native/PLAY_STORE.md` (proyek aplikasi) — jujur terhadap fitur yang
+benar-benar ada:
 
-Teks fitur diambil dari deskripsi resmi di `native/PLAY_STORE.md` (proyek
-aplikasi) — jujur terhadap fitur yang benar-benar ada, tanpa klaim yang
-dibuat-buat (tanpa angka pengguna fiktif, tanpa testimoni palsu).
-
-Palet & font sengaja berbeda dari dashboard aplikasi (yang bergaya SaaS modern
-biru-putih) — situs ini bergaya "buku rapor/ledger sekolah" (kertas gading,
-garis buku tulis, font Fraunces untuk judul) supaya terasa seperti halaman
-promosi, bukan cuplikan dashboard.
+- Tanpa angka pengguna atau testimoni fiktif
+- Tanpa paket harga yang dikarang — halaman Harga mengarahkan ke kontak
+- Tanpa video demo yang tidak dimiliki — diganti kartu mockup abstrak
+  (bukan tangkapan layar data sekolah asli)
 
 ## Menjalankan lokal
-
-Buka `index.html` langsung di peramban, atau jalankan server statis apa pun:
 
 ```bash
 python -m http.server 8080
 ```
+Buka `http://localhost:8080`.
 
 ## Deploy ke GitHub Pages
 
@@ -38,7 +50,15 @@ python -m http.server 8080
    lalu atur DNS domain menunjuk ke GitHub Pages (`ALIAS`/`ANAME` ke
    `<username>.github.io`, atau 4 `A` record ke IP GitHub Pages).
 
+## Menambah halaman baru
+
+1. Salin salah satu halaman yang ada (mis. `manfaat.html`) sebagai kerangka.
+2. Ganti `<title>`, `<meta name="description">`, isi `<main>`.
+3. Tambahkan tautan ke halaman baru di nav (desktop `ul` + `#mobileMenu ul`)
+   **di semua halaman**, termasuk halaman baru itu sendiri (tandai `class="active"`).
+4. Tambahkan juga di kolom "Halaman" pada footer tiap halaman kalau perlu.
+
 ## Update
 
-Edit `index.html`, commit, push — GitHub Pages otomatis membangun ulang dalam
-beberapa menit.
+Edit berkas yang relevan, commit, push — GitHub Pages otomatis membangun ulang
+dalam beberapa menit.
