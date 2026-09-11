@@ -13,13 +13,20 @@ manfaat.html    Kenapa sekolah pindah ke Sekovia
 harga.html      Model harga (disesuaikan skala sekolah, bukan paket fiktif)
 faq.html        Pertanyaan umum
 kontak.html     Email, web admin, alamat + CTA
-assets/styles.css   Semua gaya (token warna, tipografi, komponen) — dipakai semua halaman
-assets/script.js    Menu mobile (hamburger) + animasi kartu fitur muncul saat discroll
 .nojekyll       Memberi tahu GitHub Pages untuk tidak memproses lewat Jekyll
 ```
 
 Tiap halaman berbagi header (nav + logo) dan footer yang sama; nav menyorot
 halaman yang sedang dibuka (`class="active"`).
+
+**Setiap halaman berdiri sendiri** — CSS dan JS ditulis langsung di dalam
+`<style>`/`<script>` tiap berkas `.html` (tidak ada `assets/styles.css`
+eksternal lagi). Ini disengaja: kalau berkasnya dibuka langsung (klik dua kali
+di File Explorer, dikirim lewat chat/email, dibuka di pratinjau yang
+sandboxed), tautan `<link href="assets/...">` relatif itu bisa gagal dimuat
+tergantung caranya dibuka — hasilnya halaman tampil tanpa gaya sama sekali.
+Dengan CSS/JS langsung di dalam berkas, halaman selalu tampil benar di mana
+pun dan bagaimana pun dibuka, termasuk tanpa server sama sekali.
 
 ## Konten
 
@@ -52,7 +59,8 @@ Buka `http://localhost:8080`.
 
 ## Menambah halaman baru
 
-1. Salin salah satu halaman yang ada (mis. `manfaat.html`) sebagai kerangka.
+1. Salin salah satu halaman yang ada (mis. `manfaat.html`) sebagai kerangka —
+   ini otomatis membawa serta `<style>`/`<script>` yang sama.
 2. Ganti `<title>`, `<meta name="description">`, isi `<main>`.
 3. Tambahkan tautan ke halaman baru di nav (desktop `ul` + `#mobileMenu ul`)
    **di semua halaman**, termasuk halaman baru itu sendiri (tandai `class="active"`).
@@ -60,5 +68,9 @@ Buka `http://localhost:8080`.
 
 ## Update
 
-Edit berkas yang relevan, commit, push — GitHub Pages otomatis membangun ulang
-dalam beberapa menit.
+Karena CSS/JS ada di dalam tiap berkas `.html` (bukan di berkas bersama),
+perubahan gaya atau skrip perlu diterapkan ke **semua 7 halaman** — cara
+tercepat: edit satu halaman dulu, lalu salin blok `<style>...</style>` atau
+`<script>...</script>` yang sama ke halaman lain, atau minta Claude
+melakukannya sekaligus di semua berkas. Setelah itu commit, push — GitHub
+Pages otomatis membangun ulang dalam beberapa menit.
