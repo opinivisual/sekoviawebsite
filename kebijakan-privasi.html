@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi — Sekovia</title>
+<meta name="description" content="Bagaimana Sekovia mengumpulkan, menggunakan, menyimpan, dan melindungi data pribadi pengguna aplikasi manajemen sekolah Sekovia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='1' y='1' width='38' height='38' rx='11' fill='%232563EB'/%3E%3Cpath d='M13 21l4 4 10-11' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ============================= TOKENS ============================= */
+  :root{
+    --bg:#F8FAFC;
+    --bg-2:#EFF4FB;
+    --panel:#FFFFFF;
+    --panel-2:#F1F5F9;
+    --ink:#0F172A;
+    --muted:#64748B;
+    --muted-2:#94A3B8;
+    --line:#E2E8F0;
+    --line-strong:#CBD5E1;
+    --accent:#2563EB;
+    --accent-2:#1D4ED8;
+    --accent-light:#60A5FA;
+    --accent-soft:#DBEAFE;
+    --purple:#7C3AED; --purple-soft:#EDE9FE;
+    --green:#16A34A;  --green-soft:#DCFCE7;
+    --orange:#EA580C; --orange-soft:#FFEDD5;
+    --sky:#0EA5E9;    --sky-soft:#E0F2FE;
+    --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+    --shadow: 0 1px 3px rgba(15,23,42,.05), 0 16px 32px -16px rgba(15,23,42,.16);
+    --shadow-lg: 0 2px 6px rgba(15,23,42,.06), 0 30px 60px -20px rgba(37,99,235,.25);
+    --radius: 20px;
+    --radius-sm: 14px;
+    --sans: 'Inter', ui-sans-serif, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+    --band-bg-1:#1D4ED8; --band-bg-2:#1E293B; --band-fg:#F8FAFC; --band-fg-dim:rgba(248,250,252,.72); --band-line:rgba(248,250,252,.2);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0A0F1C; --bg-2:#0D1424; --panel:#121A2C; --panel-2:#161F35;
+      --ink:#EAF1FB; --muted:#93A3BE; --muted-2:#66768F;
+      --line:#1F2A42; --line-strong:#2B3A5A;
+      --accent:#5B8DF6; --accent-2:#7DA3F8; --accent-light:#93B7FA; --accent-soft:#1B2C4E;
+      --purple:#B393F5; --purple-soft:#241D3D; --green:#4ADE80; --green-soft:#123423;
+      --orange:#FB923C; --orange-soft:#3A2313; --sky:#38BDF8; --sky-soft:#0F2C3E;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 20px 40px -18px rgba(0,0,0,.6);
+      --shadow-lg: 0 2px 6px rgba(0,0,0,.4), 0 30px 60px -20px rgba(91,141,246,.35);
+      --band-bg-1:#1D4ED8; --band-bg-2:#0A0F1C; --band-fg:#F8FAFC; --band-fg-dim:rgba(248,250,252,.68); --band-line:rgba(248,250,252,.16);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0A0F1C; --bg-2:#0D1424; --panel:#121A2C; --panel-2:#161F35;
+    --ink:#EAF1FB; --muted:#93A3BE; --muted-2:#66768F;
+    --line:#1F2A42; --line-strong:#2B3A5A;
+    --accent:#5B8DF6; --accent-2:#7DA3F8; --accent-light:#93B7FA; --accent-soft:#1B2C4E;
+    --purple:#B393F5; --purple-soft:#241D3D; --green:#4ADE80; --green-soft:#123423;
+    --orange:#FB923C; --orange-soft:#3A2313; --sky:#38BDF8; --sky-soft:#0F2C3E;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 20px 40px -18px rgba(0,0,0,.6);
+    --shadow-lg: 0 2px 6px rgba(0,0,0,.4), 0 30px 60px -20px rgba(91,141,246,.35);
+    --band-bg-1:#1D4ED8; --band-bg-2:#0A0F1C; --band-fg:#F8FAFC; --band-fg-dim:rgba(248,250,252,.68); --band-line:rgba(248,250,252,.16);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 24px}
+  section{padding:104px 0}
+  @media (max-width:720px){ section{padding:64px 0} .wrap{padding:0 20px} }
+
+  h1,h2,h3{font-family:var(--sans); text-wrap:balance; margin:0; color:var(--ink); letter-spacing:-.02em}
+  h2{font-size:clamp(1.7rem,3.2vw,2.5rem); font-weight:800}
+  h3{font-size:1.1rem; font-weight:700; letter-spacing:-.01em}
+  p{margin:0}
+  .lede{font-size:1.1rem; color:var(--muted); max-width:60ch; line-height:1.7}
+  .eyebrow{
+    font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); display:inline-flex; align-items:center; gap:8px; margin-bottom:16px;
+    background:var(--accent-soft); padding:6px 12px 6px 10px; border-radius:999px; font-weight:600;
+  }
+  .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--accent); display:inline-block}
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky; top:0; z-index:40;
+    background:color-mix(in srgb, var(--bg) 72%, transparent);
+    backdrop-filter:saturate(160%) blur(14px); -webkit-backdrop-filter:saturate(160%) blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{display:flex; align-items:center; justify-content:space-between; height:72px}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.15rem; text-decoration:none; letter-spacing:-.02em}
+  .brand svg{display:block}
+  .navlinks{display:flex; align-items:center; gap:8px}
+  .navlinks ul{display:flex; gap:4px; list-style:none; margin:0; padding:0}
+  .navlinks a{text-decoration:none; font-size:.86rem; color:var(--muted); font-weight:600; padding:9px 12px; border-radius:999px; transition:background .15s ease, color .15s ease}
+  .navlinks a:hover{color:var(--ink); background:var(--panel-2)}
+  #mobileMenu a{text-decoration:none; color:var(--ink); font-weight:600; font-size:.98rem}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; border-radius:999px; font-weight:700;
+    font-size:.92rem; padding:12px 22px; text-decoration:none; border:1px solid transparent;
+    cursor:pointer; transition:transform .15s ease, box-shadow .2s ease, background .15s ease, border-color .15s ease;
+    font-family:var(--sans); white-space:nowrap;
+  }
+  .btn:active{transform:translateY(1px) scale(.99)}
+  .btn-primary{background:var(--accent); color:#fff; box-shadow:0 1px 2px rgba(15,23,42,.08), 0 10px 24px -10px rgba(37,99,235,.55)}
+  .btn-primary:hover{background:var(--accent-2); box-shadow:0 1px 2px rgba(15,23,42,.08), 0 14px 30px -10px rgba(37,99,235,.65)}
+  .burger{display:none; background:var(--panel); border:1px solid var(--line-strong); border-radius:10px; width:42px; height:42px; align-items:center; justify-content:center; color:var(--ink)}
+  @media (max-width:1040px){
+    .navlinks ul{display:none}
+    .burger{display:flex}
+    .navcta .btn span.long{display:none}
+  }
+  .navcta{display:flex; align-items:center; gap:10px}
+  .navcta .btn span.short{display:none}
+  @media (max-width:1040px){ .navcta .btn span.short{display:inline} }
+
+  footer{border-top:1px solid var(--line); padding:36px 0; margin-top:24px}
+  .footrow{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:.84rem; color:var(--muted-2)}
+  .footrow a{text-decoration:none; color:var(--muted); font-weight:500}
+  .footrow a:hover{color:var(--accent)}
+  .footlinks{display:flex; gap:22px; flex-wrap:wrap}
+
+  /* ---------- page header (non-home pages) ---------- */
+  .pagehead{padding:96px 0 0}
+  .pagehead .wrap{position:relative; z-index:1}
+  .crumb{font-size:.82rem; color:var(--muted-2); margin-bottom:14px}
+  .crumb a{color:var(--muted-2); text-decoration:none}
+  .crumb a:hover{color:var(--accent)}
+  .pagehead h1{font-size:clamp(2rem,4vw,2.9rem); font-weight:800; line-height:1.1}
+
+  /* ---------- kebijakan privasi (long-form legal prose) ---------- */
+  .policymeta{font-family:var(--mono); font-size:.8rem; color:var(--muted-2); margin-top:16px}
+  .policy{max-width:760px}
+  .policy > * + *{margin-top:20px}
+  .policy h2{font-size:1.35rem; margin-top:44px; padding-top:28px; border-top:1px solid var(--line)}
+  .policy h2:first-of-type{margin-top:0; padding-top:0; border-top:none}
+  .policy h3{font-size:1rem; margin-top:24px}
+  .policy p, .policy li{color:var(--muted); font-size:.95rem; line-height:1.75}
+  .policy strong{color:var(--ink); font-weight:700}
+  .policy ul{margin:0; padding-left:22px; display:flex; flex-direction:column; gap:8px}
+  .policy a{color:var(--accent); text-decoration:underline; text-underline-offset:2px; font-weight:600}
+  .policytable{width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius-sm); overflow:hidden; font-size:.86rem}
+  .policytable th, .policytable td{padding:12px 16px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+  .policytable tr:last-child td{border-bottom:none}
+  .policytable th{background:var(--panel-2); font-weight:700; color:var(--ink); font-size:.78rem; text-transform:uppercase; letter-spacing:.04em}
+  .policytable td{color:var(--muted)}
+  .policynote{background:var(--panel-2); border:1px solid var(--line); border-radius:var(--radius-sm); padding:18px 20px; font-size:.88rem; color:var(--muted); line-height:1.65}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap navrow">
+    <a href="index.html" class="brand">
+      <svg width="30" height="30" viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="11" fill="#2563EB"/><path d="M13 21l4 4 10-11" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Sekovia
+    </a>
+    <div class="navlinks">
+      <ul>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="fitur.html">Fitur</a></li>
+        <li><a href="manfaat.html">Manfaat</a></li>
+        <li><a href="harga.html">Harga</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+    <div class="navcta">
+      <button class="burger" id="burgerBtn" aria-label="Buka menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a class="btn btn-primary" href="https://app.sekovia.id" target="_blank" rel="noopener"><span class="long">Masuk ke Aplikasi</span><span class="short">Masuk</span></a>
+    </div>
+  </div>
+  <div id="mobileMenu" hidden style="border-top:1px solid var(--line); background:var(--bg)">
+    <ul style="list-style:none; margin:0; padding:16px 24px; display:flex; flex-direction:column; gap:16px">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="fitur.html">Fitur</a></li>
+      <li><a href="manfaat.html">Manfaat</a></li>
+      <li><a href="harga.html">Harga</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="pagehead">
+    <div class="wrap">
+      <div class="crumb"><a href="index.html">Beranda</a> / Kebijakan Privasi</div>
+      <h1>Kebijakan Privasi</h1>
+      <div class="policymeta">Berlaku sejak: 8 September 2026 · Terakhir diperbarui: 8 September 2026</div>
+    </div>
+  </section>
+
+  <!-- ============================= KEBIJAKAN PRIVASI ============================= -->
+  <section id="kebijakan">
+    <div class="wrap">
+      <div class="policy">
+
+        <p>
+          Kebijakan ini menjelaskan bagaimana <strong>Sekovia</strong> ("Aplikasi", "kami")
+          mengumpulkan, menggunakan, menyimpan, dan melindungi data pribadi pengguna. Sekovia
+          adalah aplikasi manajemen sekolah yang dipakai oleh administrator sekolah, guru,
+          siswa, dan orang tua/wali untuk kegiatan akademik, kehadiran, komunikasi, keuangan
+          sekolah, dan perpustakaan digital.
+        </p>
+        <p>
+          Aplikasi ini dikelola oleh <strong>Moh Arwani</strong> (pengembang perorangan),
+          beralamat di Tegalpare, Kecamatan Muncar, Kabupaten Banyuwangi, Jawa Timur,
+          Indonesia.
+        </p>
+
+        <h2>1. Peran: sekolah sebagai pengendali data</h2>
+        <p>
+          Data siswa, nilai, kehadiran, dan catatan akademik dimasukkan dan dikendalikan oleh
+          <strong>sekolah masing-masing</strong> yang memakai Sekovia. Dalam hal ini sekolah
+          bertindak sebagai <em>pengendali data</em> (data controller) dan Sekovia bertindak
+          sebagai <em>pemroses data</em> (data processor) yang menjalankan instruksi sekolah.
+          Pertanyaan mengenai data seorang siswa sebaiknya diajukan lebih dulu ke sekolah
+          yang bersangkutan.
+        </p>
+
+        <h2>2. Data yang kami kumpulkan</h2>
+
+        <h3>a. Data akun</h3>
+        <ul>
+          <li>Alamat email dan kata sandi (kata sandi disimpan dalam bentuk ter-<em>hash</em>, tidak pernah dalam teks biasa).</li>
+          <li>Nama lengkap, peran (admin/guru/siswa/orang tua), dan sekolah yang ditautkan.</li>
+          <li>Foto profil, jika Anda mengunggahnya.</li>
+        </ul>
+
+        <h3>b. Data akademik &amp; kesiswaan (dimasukkan oleh sekolah)</h3>
+        <ul>
+          <li>Identitas siswa: nama, NISN, kelas, dan data pendaftaran.</li>
+          <li>Kehadiran, termasuk pemindaian kartu QR dan waktu check-in gerbang.</li>
+          <li>Nilai, penilaian tugas, rapor, dan leger nilai.</li>
+          <li>Catatan kedisiplinan, konseling, keagamaan, perkembangan, prestasi, dan ekstrakurikuler.</li>
+          <li>Surat izin/sakit dan keterangan terkait kehadiran.</li>
+          <li>Data orang tua/wali: nama, kontak, dan hubungannya dengan siswa.</li>
+        </ul>
+
+        <h3>c. Komunikasi</h3>
+        <ul>
+          <li>Pesan dan percakapan antar pengguna di dalam aplikasi (guru–orang tua, pengumuman, notifikasi).</li>
+        </ul>
+
+        <h3>d. Keuangan sekolah</h3>
+        <ul>
+          <li>Tagihan SPP, pembayaran, diskon/beasiswa, dan catatan keuangan lain yang dikelola sekolah.</li>
+        </ul>
+
+        <h3>e. Berkas yang diunggah</h3>
+        <ul>
+          <li>Foto lembar kerja/papan tulis untuk fitur penyusunan materi.</li>
+          <li>Dokumen perpustakaan digital (PDF/EPUB) yang diunggah staf sekolah.</li>
+        </ul>
+
+        <h3>f. Data teknis</h3>
+        <ul>
+          <li>Informasi dasar perangkat dan log yang diperlukan untuk keamanan, pencegahan penyalahgunaan, dan perbaikan bug (mis. jenis perangkat, versi aplikasi, waktu akses).</li>
+        </ul>
+        <p>
+          Sekovia <strong>tidak</strong> mengumpulkan lokasi presisi (GPS), tidak mengakses
+          daftar kontak, tidak merekam audio, dan tidak menampilkan iklan pihak ketiga.
+        </p>
+
+        <h2>3. Izin perangkat</h2>
+        <table class="policytable">
+          <tr><th>Izin</th><th>Kegunaan</th></tr>
+          <tr><td>Kamera</td><td>Mengambil foto profil dan memindai teks dari foto lembar kerja/papan tulis saat menyusun materi. Foto hanya dikirim saat Anda menekan tombol unggah.</td></tr>
+          <tr><td>Galeri / Media</td><td>Memilih foto yang sudah ada untuk foto profil atau bahan materi.</td></tr>
+          <tr><td>Internet</td><td>Menghubungkan aplikasi ke server untuk menyimpan dan mengambil data.</td></tr>
+        </table>
+
+        <h2>4. Bagaimana data digunakan</h2>
+        <ul>
+          <li>Menjalankan fungsi inti: akun &amp; login, pencatatan kehadiran, nilai &amp; rapor, komunikasi, keuangan sekolah, dan perpustakaan digital.</li>
+          <li>Mengirim notifikasi terkait sekolah (mis. pemberitahuan check-in ke orang tua, pengumuman).</li>
+          <li>Menjaga keamanan sistem, mencegah penyalahgunaan, dan memperbaiki masalah teknis.</li>
+          <li>Fitur Asisten AI (opsional, hanya jika diaktifkan sekolah): teks yang Anda ketik untuk membuat soal/materi dikirim ke penyedia model AI untuk menghasilkan keluaran. Jangan memasukkan data pribadi siswa ke dalam kolom ini.</li>
+        </ul>
+        <p>Kami <strong>tidak menjual</strong> data pribadi kepada siapa pun.</p>
+
+        <h2>5. Pihak ketiga yang memproses data</h2>
+        <p>Kami memakai penyedia layanan berikut hanya untuk menjalankan Aplikasi:</p>
+        <table class="policytable">
+          <tr><th>Penyedia</th><th>Fungsi</th><th>Data yang diproses</th></tr>
+          <tr><td>Supabase</td><td>Basis data, autentikasi, penyimpanan berkas, notifikasi real-time</td><td>Seluruh data akun &amp; akademik yang tersimpan</td></tr>
+          <tr><td>Vercel</td><td>Hosting antarmuka web</td><td>Data teknis permintaan (log server)</td></tr>
+          <tr><td>Expo (EAS)</td><td>Distribusi &amp; pembaruan aplikasi</td><td>Data teknis perangkat &amp; versi aplikasi</td></tr>
+          <tr><td>DeepSeek</td><td>Membuat draf soal/materi pada fitur Asisten AI</td><td>Hanya teks yang Anda ketik pada kolom Asisten AI</td></tr>
+          <tr><td>Penyedia berita pendidikan</td><td>Menampilkan berita pendidikan di beranda</td><td>Tidak ada data pribadi yang dikirim</td></tr>
+        </table>
+        <p>
+          Sebagian penyedia dapat memproses atau menyimpan data di server di luar Indonesia.
+          Kami memilih penyedia yang menerapkan standar keamanan yang wajar.
+        </p>
+
+        <h2>6. Penyimpanan &amp; keamanan</h2>
+        <ul>
+          <li>Data dikirim melalui koneksi terenkripsi (HTTPS/TLS).</li>
+          <li>Akses data dibatasi berdasarkan peran dan sekolah melalui aturan keamanan tingkat baris (row-level security) di basis data.</li>
+          <li>Kata sandi disimpan ter-<em>hash</em>. Kami tidak dapat melihat kata sandi Anda.</li>
+        </ul>
+
+        <h2>7. Retensi data</h2>
+        <p>
+          Data akademik disimpan selama sekolah masih menjadi pengguna aktif Sekovia, atau
+          selama diwajibkan oleh peraturan pendidikan yang berlaku. Setelah sekolah berhenti
+          memakai layanan, data akan dihapus atau dianonimkan dalam waktu 90 hari, kecuali
+          ada kewajiban hukum untuk menyimpannya lebih lama.
+        </p>
+
+        <h2>8. Hak Anda</h2>
+        <ul>
+          <li>Meminta akses terhadap data pribadi Anda.</li>
+          <li>Meminta koreksi data yang tidak akurat.</li>
+          <li>Meminta penghapusan data (dengan tetap tunduk pada kewajiban sekolah dan hukum).</li>
+          <li>Menarik persetujuan atas fitur opsional.</li>
+        </ul>
+        <p>
+          Untuk data akademik, ajukan permintaan melalui sekolah Anda. Untuk data akun,
+          hubungi kami di alamat pada bagian Kontak.
+        </p>
+
+        <h2>9. Siswa dan pengguna di bawah umur</h2>
+        <p>
+          Sebagian siswa pengguna Sekovia mungkin berusia di bawah 18 tahun. Akun siswa dan
+          orang tua/wali <strong>dibuat oleh administrator sekolah</strong>, bukan melalui
+          pendaftaran mandiri oleh anak. Data siswa dimasukkan dan dikelola oleh sekolah dalam
+          rangka penyelenggaraan pendidikan. Kami tidak menampilkan iklan dan tidak melakukan
+          profil pemasaran terhadap pengguna mana pun. Pada Google Play, kelompok usia
+          sasaran Aplikasi ditetapkan 13 tahun ke atas; akun bagi siswa berusia di bawah 13
+          tahun hanya dibuat serta digunakan di bawah pengawasan sekolah dan orang tua/wali.
+        </p>
+
+        <h2>10. Perubahan kebijakan</h2>
+        <p>
+          Kebijakan ini dapat diperbarui sewaktu-waktu. Perubahan penting akan diberitahukan
+          melalui aplikasi atau email. Tanggal "Terakhir diperbarui" di atas menunjukkan versi
+          terbaru.
+        </p>
+
+        <h2>11. Kontak</h2>
+        <p>
+          Pertanyaan atau permintaan terkait privasi dapat dikirim ke:<br>
+          Email: <a href="mailto:kumienftotty@gmail.com">kumienftotty@gmail.com</a><br>
+          Moh Arwani — Tegalpare, Kecamatan Muncar, Kabupaten Banyuwangi, Jawa Timur, Indonesia
+        </p>
+
+        <div class="policynote">
+          Dokumen ini disediakan dalam Bahasa Indonesia dan berlaku untuk aplikasi
+          Sekovia di Google Play (paket <code>id.sekovia.app</code>) serta versi web di
+          app.sekovia.id.
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex; flex-direction:column; gap:24px">
+    <div class="footrow" style="align-items:flex-start">
+      <div style="max-width:340px">
+        <a href="index.html" class="brand" style="margin-bottom:10px; display:inline-flex">
+          <svg width="26" height="26" viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="11" fill="#2563EB"/><path d="M13 21l4 4 10-11" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Sekovia
+        </a>
+        <p style="font-size:.85rem; color:var(--muted); line-height:1.6">Aplikasi manajemen sekolah — absensi, akademik, keuangan, dan komunikasi orang tua–guru dalam satu tempat.</p>
+      </div>
+      <div class="footlinks" style="flex-direction:column; gap:10px">
+        <b style="color:var(--ink); font-size:.8rem">Halaman</b>
+        <a href="tentang.html">Tentang</a>
+        <a href="fitur.html">Fitur</a>
+        <a href="harga.html">Harga</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footlinks" style="flex-direction:column; gap:10px">
+        <b style="color:var(--ink); font-size:.8rem">Kontak</b>
+        <a href="https://wa.me/6282340669258" target="_blank" rel="noopener">+62 823-4066-9258</a>
+        <a href="https://app.sekovia.id" target="_blank" rel="noopener">app.sekovia.id</a>
+        <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+      </div>
+    </div>
+    <div class="footrow" style="border-top:1px solid var(--line); padding-top:20px">
+      <span>© 2026 Sekovia</span>
+      <span>Tegalpare, Kec. Muncar, Kab. Banyuwangi, Jawa Timur</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Sekovia website — shared behaviour for every page.
+(function () {
+  var btn = document.getElementById('burgerBtn');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    var open = !menu.hidden;
+    menu.hidden = open;
+    btn.setAttribute('aria-expanded', String(!open));
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+</body>
+</html>
